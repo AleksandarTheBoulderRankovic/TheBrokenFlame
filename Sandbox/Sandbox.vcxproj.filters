@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Stormlight-Editor">
+      <UniqueIdentifier>{265F9020-9275-8EB6-DBEC-19D847425F3E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stormlight-Editor\src">
+      <UniqueIdentifier>{3D4073A2-A9AC-2E9D-72A0-C6FADECB5005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stormlight-Editor\src\Panels">
+      <UniqueIdentifier>{EF29A2A7-DBE4-9153-849C-0A9E7036DCE3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ExampleLayer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Player.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sandbox2D.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TextureRepository.h" />
+    <ClInclude Include="src\Weapon.h" />
+    <ClInclude Include="src\Skill.h" />
+    <ClInclude Include="src\Animation.h" />
+    <ClInclude Include="src\Level.h" />
+    <ClInclude Include="src\Enemy.h" />
+    <ClInclude Include="src\Character.h" />
+    <ClInclude Include="src\EncounterManager.h" />
+    <ClInclude Include="src\AudioManager.h" />
+    <ClInclude Include="src\Encounter.h" />
+    <ClInclude Include="src\HUDManager.h" />
+    <ClInclude Include="src\RaceSkills.h" />
+    <ClInclude Include="src\EnemyManager.h" />
+    <ClInclude Include="src\FieldTrap.h" />
+    <ClInclude Include="src\ItemManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ExampleLayer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Player.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sandbox2D.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SandboxApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TextureRepository.cpp" />
+    <ClCompile Include="src\Weapon.cpp" />
+    <ClCompile Include="src\Skill.cpp" />
+    <ClCompile Include="src\Level.cpp" />
+    <ClCompile Include="src\Enemy.cpp" />
+    <ClCompile Include="src\EncounterManager.cpp" />
+    <ClCompile Include="src\AudioManager.cpp" />
+    <ClCompile Include="src\Encounter.cpp" />
+    <ClCompile Include="src\HUDManager.cpp" />
+    <ClCompile Include="src\RaceSkills.cpp" />
+    <ClCompile Include="src\EnemyManager.cpp" />
+    <ClCompile Include="src\FieldTrap.cpp" />
+    <ClCompile Include="src\ItemManager.cpp" />
+  </ItemGroup>
+</Project>

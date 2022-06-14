@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{61705900-4DFC-870B-B6AA-880BA255880B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Sandbox">
+      <UniqueIdentifier>{3F7B6B1D-2B33-AD6A-943A-86C68011485B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Stormlight">
+      <UniqueIdentifier>{1DB1B9CD-8971-3504-52AC-7E81BE2B7AE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Stormlight\vendor">
+      <UniqueIdentifier>{DA44D187-C6D3-5A51-6FF2-6E4C5B606BF7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Stormlight\vendor\Box2D">
+      <UniqueIdentifier>{68AA57D8-54BA-03A9-BD73-68C7A9A2F241}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Stormlight\vendor\GLFW">
+      <UniqueIdentifier>{59183BB1-C5DA-6E3B-0E8B-FDC77A8C4719}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Stormlight\vendor\Glad">
+      <UniqueIdentifier>{01A43BB1-6D66-6F3B-B616-FEC722184819}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Stormlight\vendor\HazelAudio">
+      <UniqueIdentifier>{EFD94170-5BBD-50B0-64C0-7EECD0221701}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Stormlight\vendor\HazelAudio\HazelAudio">
+      <UniqueIdentifier>{E4F701DC-D05F-C8A9-39CB-DCBF2552DF95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Stormlight\vendor\HazelAudio\HazelAudio\vendor">
+      <UniqueIdentifier>{C1457B5C-2D0C-D878-7667-66DBE26C46DD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Stormlight\vendor\HazelAudio\HazelAudio\vendor\OpenAL-Soft">
+      <UniqueIdentifier>{58C4AB03-C48C-7987-8D1D-8299F9A4A9C2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Stormlight\vendor\HazelAudio\HazelAudio\vendor\Vorbis">
+      <UniqueIdentifier>{25C2C2F2-1197-0AA6-3A46-4AA2267A18BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Stormlight\vendor\HazelAudio\HazelAudio\vendor\libogg">
+      <UniqueIdentifier>{E41D9F25-D0F2-E6D8-F9A1-26D5E5D5F4EF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Stormlight\vendor\imgui">
+      <UniqueIdentifier>{C40D18DB-B01D-C4AB-19D7-28CA0506B344}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Stormlight\vendor\yaml-cpp">
+      <UniqueIdentifier>{CCC04361-38D9-2A8B-0186-BA246D5DBF24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Stormlight-Editor">
+      <UniqueIdentifier>{31727B7B-1D01-0545-C61F-1940B28D15EB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Sandbox\premake5.lua">
+      <Filter>..\Sandbox</Filter>
+    </None>
+    <None Include="..\..\Stormlight-Editor\premake5.lua">
+      <Filter>..\Stormlight-Editor</Filter>
+    </None>
+    <None Include="..\..\Stormlight\premake5.lua">
+      <Filter>..\Stormlight</Filter>
+    </None>
+    <None Include="..\..\Stormlight\vendor\Box2D\premake5.lua">
+      <Filter>..\Stormlight\vendor\Box2D</Filter>
+    </None>
+    <None Include="..\..\Stormlight\vendor\GLFW\premake5.lua">
+      <Filter>..\Stormlight\vendor\GLFW</Filter>
+    </None>
+    <None Include="..\..\Stormlight\vendor\Glad\premake5.lua">
+      <Filter>..\Stormlight\vendor\Glad</Filter>
+    </None>
+    <None Include="..\..\Stormlight\vendor\HazelAudio\HazelAudio\vendor\OpenAL-Soft\premake5.lua">
+      <Filter>..\Stormlight\vendor\HazelAudio\HazelAudio\vendor\OpenAL-Soft</Filter>
+    </None>
+    <None Include="..\..\Stormlight\vendor\HazelAudio\HazelAudio\vendor\Vorbis\premake5.lua">
+      <Filter>..\Stormlight\vendor\HazelAudio\HazelAudio\vendor\Vorbis</Filter>
+    </None>
+    <None Include="..\..\Stormlight\vendor\HazelAudio\HazelAudio\vendor\libogg\premake5.lua">
+      <Filter>..\Stormlight\vendor\HazelAudio\HazelAudio\vendor\libogg</Filter>
+    </None>
+    <None Include="..\..\Stormlight\vendor\HazelAudio\premake5.lua">
+      <Filter>..\Stormlight\vendor\HazelAudio</Filter>
+    </None>
+    <None Include="..\..\Stormlight\vendor\imgui\premake5.lua">
+      <Filter>..\Stormlight\vendor\imgui</Filter>
+    </None>
+    <None Include="..\..\Stormlight\vendor\yaml-cpp\premake5.lua">
+      <Filter>..\Stormlight\vendor\yaml-cpp</Filter>
+    </None>
+    <None Include="..\..\premake5.lua">
+      <Filter>..</Filter>
+    </None>
+    <None Include="premake5.lua" />
+  </ItemGroup>
+</Project>

@@ -46,7 +46,6 @@ namespace Stormlight {
 	}
 
 	void Application::OnEvent(Event& e) {
-		//SL_CORE_INFO("{0}", e);
 
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(SL_BIND_EVENT_FN(Application::OnWindowClose));

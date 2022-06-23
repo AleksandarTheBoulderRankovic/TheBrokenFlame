@@ -46,10 +46,10 @@ void Sandbox2D::OnUpdate(Stormlight::Timestep ts)
 			m_Level->OnResize((uint32_t)m_ViewportSize.x, (uint32_t)m_ViewportSize.y);
 		}
 
-		//Update
+		// Update
 		m_CameraController.OnUpdate(ts);
 
-		//Renderer
+		// Renderer
 		Stormlight::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		Stormlight::RenderCommand::Clear();
 
@@ -140,14 +140,6 @@ void Sandbox2D::OnImGuiRender()
 
 		uint32_t textureID = m_Framebuffer->GetColorAttachmentRendererID();
 		ImGui::Image(reinterpret_cast<void*>(textureID), ImVec2{ m_ViewportSize.x, m_ViewportSize.y }, ImVec2{ 0, 1 }, ImVec2{ 1, 0 });
-
-		auto& transform = m_Level->m_ControlledPlayer->GetComponent<Stormlight::TransformComponent>();
-
-		float x = ((transform.Translation.x + 8.8888889f)  * m_ViewportSize.x) / 17.7777778f;
-		float y = ((-(transform.Translation.y - 5.0f)) * m_ViewportSize.y) / 10.0f;
-
-		ImGui::SetCursorPos(ImVec2{ x, y });
-		ImGui::Text("ACA %d", 1);
 
 		m_Level->m_HUDManager->RenderHUD();
 

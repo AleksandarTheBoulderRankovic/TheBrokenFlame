@@ -67,7 +67,6 @@ void Bandit::OnUpdate(Stormlight::Timestep ts)
 	}
 	else
 	{
-		ts = ts > 0.2f ? 0.2f : ts;
 		m_Functions[m_FunctionIndex](*this, ts);
 
 		if (m_PhaseTimer.OnUpdate(ts))
@@ -305,8 +304,6 @@ void Fairy::OnUpdate(Stormlight::Timestep ts)
 	}
 	else
 	{
-		ts = ts > 0.2f ? 0.2f : ts;
-
 		auto& playerTrans = s_MainPlayer.GetComponent<Stormlight::TransformComponent>();
 		auto& fairyTrans = this->GetComponent<Stormlight::TransformComponent>();
 		glm::vec2 direction = playerTrans.Get2DTranslate() - fairyTrans.Get2DTranslate();
@@ -417,7 +414,6 @@ void Fairy::Fire(glm::vec2 direction)
 		}
 	}
 }
-
 
 void Fairy::CreateProjectile(glm::vec2 direction)
 {

@@ -46,11 +46,4 @@ private:
 	AudioManager* m_AudioManager;
 
 	float m_WindowWidth = 0.0f, m_WindowHeight = 0.0f;
-
-	// HUD Entities
-	Stormlight::Entity m_HUDMoney;
-	Stormlight::Entity m_HUDWeapon;
-	Stormlight::Entity m_HUDFirstSkill;
-	Stormlight::Entity m_HUDSecondSkill;
-
 };

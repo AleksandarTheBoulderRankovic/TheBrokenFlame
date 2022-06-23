@@ -87,8 +87,8 @@ void Encounter::UpdateProjectile(Stormlight::Entity projectile, Stormlight::Time
 {
 	auto xySpeed = projectile.GetComponent<Stormlight::MovementComponent>().XYSpeed;
 	auto& transform = projectile.GetComponent<Stormlight::TransformComponent>();
-	transform.Translation.x += xySpeed.x * ts * 8.05f;
-	transform.Translation.y += xySpeed.y * ts * 8.05f;
+	transform.Translation.x += xySpeed.x * ts * 6.05f;
+	transform.Translation.y += xySpeed.y * ts * 6.05f;
 
 	HandleCollisions(projectile);
 }
@@ -100,7 +100,7 @@ void Encounter::HandleCollisions(Stormlight::Entity projectile)
 		Hazel::Audio::Play(m_EncounterManager->m_AudioManager->m_ProjectileImpact);
 		this->GetScene()->DestroyEntity(projectile);
 		auto& hp = m_EncounterManager->m_ControlledPlayer->GetComponent<Stormlight::HealthComponent>();
-		hp.health -= 60.0f;
+		hp.health -= 30.0f;
 		hp.UpdateFullHealthBar();
 		return;
 	}
@@ -400,7 +400,7 @@ void Boss::OnUpdate(Stormlight::Timestep ts)
 	{
 		m_Boss->m_Teleporting = false;
 		float random = Stormlight::GetRandomFloat();
-		if (random < 0.1f)
+		if (random < 0.05f)
 		{
 			auto& bossTrans = m_Boss->GetComponent<Stormlight::TransformComponent>();
 			m_EncounterManager->m_EnemyManager->CreateFairy(glm::vec2(bossTrans.Translation.x, bossTrans.Translation.y));

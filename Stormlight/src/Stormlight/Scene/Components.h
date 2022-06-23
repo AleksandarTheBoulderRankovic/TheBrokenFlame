@@ -55,7 +55,7 @@ namespace Stormlight {
 
 	struct MovementComponent
 	{
-		float Speed = 5.0f;
+		float Speed = 6.0f;
 		glm::vec2 XYSpeed = { 0.0f, 0.0f };
 
 		MovementComponent() = default;
@@ -207,7 +207,7 @@ namespace Stormlight {
 	struct EnemyComponent
 	{
 		bool Hooked = false;
-		float AttackDamage = 60.0f;
+		float AttackDamage = 30.0f;
 		EnemyComponent() = default;
 	};
 

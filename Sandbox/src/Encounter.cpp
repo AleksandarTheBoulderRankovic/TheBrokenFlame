@@ -5,6 +5,7 @@
 void Encounter::OnCreate()
 {
 	Hazel::Audio::Stop(m_EncounterManager->m_AudioManager->m_Overworld);
+	m_EncounterManager->m_AudioManager->m_EncounterBeginFight.SetGain(0.5f);
 	Hazel::Audio::Play(m_EncounterManager->m_AudioManager->m_EncounterBeginFight);
 	Hazel::Audio::Play(m_EncounterManager->m_AudioManager->m_FightNormal);
 	m_EncounterManager->m_AudioManager->m_FightNormal.SetLoop(true);
@@ -17,6 +18,10 @@ void Encounter::OnCreate()
 	Forground.AddComponent<Stormlight::SpriteRendererComponent>().Texture = m_EncounterManager->m_TextureRepository->m_Forground_1;
 
 	m_EncounterManager->m_HUDManager->MoveHUDBottom();
+
+	auto& playerTrans = m_EncounterManager->m_ControlledPlayer->GetComponent<Stormlight::TransformComponent>();
+	playerTrans.Translation.x = -6.6f;
+	playerTrans.Translation.y = -3.5f;
 }
 
 void Encounter::OnUpdate(Stormlight::Timestep ts)
@@ -51,6 +56,7 @@ void Encounter::OnExit()
 {
 	Hazel::Audio::Stop(m_EncounterManager->m_AudioManager->m_FightNormal);
 	Hazel::Audio::Play(m_EncounterManager->m_AudioManager->m_EncounterCompleted);
+	m_EncounterManager->m_AudioManager->m_Overworld.SetGain(0.2f);
 	Hazel::Audio::Play(m_EncounterManager->m_AudioManager->m_Overworld);
 	m_EncounterManager->m_AudioManager->m_Overworld.SetLoop(true);
 	for (auto projectile : this->GetScene()->GetAllWithTag("Projectile"))
@@ -143,10 +149,15 @@ void StagingGround::OnCreate()
 		Forground.GetComponent<Stormlight::SpriteRendererComponent>().Texture = m_EncounterManager->m_TextureRepository->m_Forground_0;
 	else
 		Forground.AddComponent<Stormlight::SpriteRendererComponent>().Texture = m_EncounterManager->m_TextureRepository->m_Forground_0;
+
+	auto& playerTrans = m_EncounterManager->m_ControlledPlayer->GetComponent<Stormlight::TransformComponent>();
+	playerTrans.Translation.x = 0.0f;
+	playerTrans.Translation.y = 0.0f;
 }
 
 void StagingGround::OnExit()
 {
+	m_EncounterManager->m_AudioManager->m_Overworld.SetGain(0.2f);
 	Hazel::Audio::Play(m_EncounterManager->m_AudioManager->m_Overworld);
 	m_EncounterManager->m_AudioManager->m_Overworld.SetLoop(true);
 	for (auto projectile : this->GetScene()->GetAllWithTag("Projectile"))
@@ -358,6 +369,8 @@ Boss::Boss(Stormlight::Entity const& entity, EncounterManager* encounterManager,
 
 void Boss::OnCreate()
 {
+	Hazel::Audio::Stop(m_EncounterManager->m_AudioManager->m_Overworld);
+	m_EncounterManager->m_AudioManager->m_FightBoss.SetGain(0.2f);
 	Hazel::Audio::Play(m_EncounterManager->m_AudioManager->m_FightBoss);
 	m_EncounterManager->m_AudioManager->m_FightBoss.SetLoop(true);
 	m_EncounterManager->ConcealEncounters();
@@ -369,6 +382,10 @@ void Boss::OnCreate()
 
 	m_EncounterManager->m_HUDManager->MoveHUDBottom();
 	m_Boss = m_EncounterManager->m_EnemyManager->CreateBoss(1000.0f);
+
+	auto& playerTrans = m_EncounterManager->m_ControlledPlayer->GetComponent<Stormlight::TransformComponent>();
+	playerTrans.Translation.x = -6.6f;
+	playerTrans.Translation.y = -3.5f;
 }
 
 void Boss::OnUpdate(Stormlight::Timestep ts)
@@ -400,7 +417,7 @@ void Boss::OnUpdate(Stormlight::Timestep ts)
 	{
 		m_Boss->m_Teleporting = false;
 		float random = Stormlight::GetRandomFloat();
-		if (random < 0.05f)
+		if (random < 0.025f)
 		{
 			auto& bossTrans = m_Boss->GetComponent<Stormlight::TransformComponent>();
 			m_EncounterManager->m_EnemyManager->CreateFairy(glm::vec2(bossTrans.Translation.x, bossTrans.Translation.y));

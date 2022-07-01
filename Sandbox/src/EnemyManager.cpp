@@ -113,11 +113,12 @@ void EnemyManager::CreateMinotaurSG()
 	ac.m_IdleSubTextures = m_TextureRepository->m_MinotaurSGIdleSubTextures;
 	ac.m_FrameDuration = 0.16f;
 
-	CreateEnemy(minotaur);
-
 	auto& minosTrans = minotaur->GetComponent<Stormlight::TransformComponent>();
 	minosTrans.Scale.x = 2.0f;
 	minosTrans.Scale.y = 2.0f;
+
+	CreateEnemy(minotaur);
+
 	minosTrans.Rotation.z = -3.14f / 2.0f;
 	minosTrans.Translation.x = 4.0f;
 	minosTrans.Translation.y = 2.0f;

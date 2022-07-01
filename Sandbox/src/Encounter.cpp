@@ -5,7 +5,7 @@
 void Encounter::OnCreate()
 {
 	Hazel::Audio::Stop(m_EncounterManager->m_AudioManager->m_Overworld);
-	m_EncounterManager->m_AudioManager->m_EncounterBeginFight.SetGain(0.5f);
+	m_EncounterManager->m_AudioManager->m_FightNormal.SetGain(0.2f);
 	Hazel::Audio::Play(m_EncounterManager->m_AudioManager->m_EncounterBeginFight);
 	Hazel::Audio::Play(m_EncounterManager->m_AudioManager->m_FightNormal);
 	m_EncounterManager->m_AudioManager->m_FightNormal.SetLoop(true);

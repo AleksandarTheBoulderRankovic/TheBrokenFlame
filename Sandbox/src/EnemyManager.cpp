@@ -119,9 +119,10 @@ void EnemyManager::CreateMinotaurSG()
 
 	CreateEnemy(minotaur);
 
-	minosTrans.Rotation.z = -3.14f / 2.0f;
-	minosTrans.Translation.x = 4.0f;
-	minosTrans.Translation.y = 2.0f;
+	auto& minosTrans2 = minotaur->GetComponent<Stormlight::TransformComponent>();
+	minosTrans2.Rotation.z = -3.14f / 2.0f;
+	minosTrans2.Translation.x = 4.0f;
+	minosTrans2.Translation.y = 2.0f;
 
 	minotaur->GetComponent<Stormlight::SpriteRendererComponent>().subTexture = ac.m_IdleSubTextures[0];
 	minotaur->GetComponent<Stormlight::SpriteRendererComponent>().Color = { 1.0f, 0.8f, 0.0f, 1.0f };
@@ -133,14 +134,18 @@ void EnemyManager::CreateMinotaurSG()
 	ac2.m_IdleSubTextures = m_TextureRepository->m_MinotaurSGIdleSubTextures;
 	ac2.m_FrameDuration = 0.17f;
 
+	
+
+	auto& minosTrans3 = minotaur2->GetComponent<Stormlight::TransformComponent>();
+	minosTrans3.Scale.x = 2.0f;
+	minosTrans3.Scale.y = 2.0f;
+
 	CreateEnemy(minotaur2);
 
-	auto& minosTrans2 = minotaur2->GetComponent<Stormlight::TransformComponent>();
-	minosTrans2.Scale.x = 2.0f;
-	minosTrans2.Scale.y = 2.0f;
-	minosTrans2.Rotation.z = -3.14f / 2.0f;
-	minosTrans2.Translation.x = -4.0f;
-	minosTrans2.Translation.y = 2.0f;
+	auto& minosTrans4 = minotaur2->GetComponent<Stormlight::TransformComponent>();
+	minosTrans4.Rotation.z = -3.14f / 2.0f;
+	minosTrans4.Translation.x = -4.0f;
+	minosTrans4.Translation.y = 2.0f;
 
 	minotaur2->GetComponent<Stormlight::SpriteRendererComponent>().subTexture = ac2.m_IdleSubTextures[0];
 	minotaur2->GetComponent<Stormlight::SpriteRendererComponent>().Color = { 1.0f, 0.8f, 0.0f, 1.0f};

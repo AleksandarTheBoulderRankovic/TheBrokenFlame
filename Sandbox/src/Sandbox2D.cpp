@@ -132,6 +132,7 @@ void Sandbox2D::OnImGuiRender()
 		ImGui::SetNextWindowSize(ImVec2(m_ViewportSize.x, m_ViewportSize.y));
 		auto window = Stormlight::Application::Get().GetWindow().GetNativeWindow();
 		ImGui::SetNextWindowPos(ImVec2(viewportPosX, viewportPosY));
+		ImGui::SetNextWindowFocus();
 		ImGui::Begin("##Viewport", nullptr, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse);
 		
 		m_ViewportFocused = ImGui::IsWindowFocused();
